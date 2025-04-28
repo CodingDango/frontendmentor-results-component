@@ -1,0 +1,114 @@
+:root {
+  --dark-purple: #4100C2;
+  --light-purple: #7158FF;
+  --blueish-purple: #2F00FF;
+  --dark-greyish-blue: #23314D;
+
+  --bg-color: #DEE8FF;
+
+  --font-color: #111;
+  --font-light: #8b8b8b;
+  --opposite-font-color: #fff;
+}  
+  
+  /*
+  ############################
+  Reusable Classes
+  ############################
+  */
+  
+  
+  /*
+  ============================
+  Flex Classes
+  ============================
+  */
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-evenly-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .flex-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .flex-start-center {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  /*
+  ============================
+  Rounded Border Classes
+  ============================
+  */
+  
+  .rounded-sm {
+    border-radius: 10px;
+  }
+  
+  .rounded-md {
+    border-radius: 30px
+  }
+  
+  .rounded-mx {
+    border-radius: 50%;
+  }
+  
+  
+  /*
+  ============================
+  Text Classes
+  ============================
+  */
+  
+  .txt-center {
+    text-align: center;
+  }
+
+  .light {
+    color: var(--font-light);
+  }
+
+  .semi-bold {
+    font-weight: 650;
+  }
+  
+  /*
+  ============================
+  Uncategorized helper classes
+  ============================
+  */
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; /* Avoids potential scrollbars */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* Optional, prevents line breaks */
+    border: 0;
+  }
+  
+  .transformable {
+    position: relative;
+  }

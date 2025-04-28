@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link href="./reusable.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,34 +16,61 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="flex-start-center flex-column">
 
-  Your Result
-  76
-  of 100
+  <main class="flex-center flex-column">
+    
+    <section class="results-summary">
+    
+      <h2 class="visually-hidden">Results Summary</h2>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+      <section class="flex-start-center flex-column">    
+        <h3 class="light semi-bold">Your Result</h3>
+        <p class="results-score flex-center flex-column"><span>76</span> of 100</p>
+        <p class="results-comparison">Great</p>
+        <p class="results-description">You scored higher than 65% of the people who have taken these tests.</p>
+      </section>
 
-  Reaction
-  80 / 100
+      <section>
+        <h3>Summary</h3>
 
-  Memory
-  92 / 100
+        <figure>
+          <img>
+          <figcaption>Reaction</figcaption>
+          <p class="summary-score"><span>80</span> / 100</p>
+        </figure>
+        
+        <figure>
+          <img>
+          <figcaption>Memory</figcaption>
+          <p class="summary-score"><span>92</span> / 100</p>
+        </figure>
 
-  Verbal
-  61 / 100
+        <figure>
+          <img>
+          <figcaption>Verbal</figcaption>
+          <p class="summary-score"><span>61</span> / 100</p>
+        </figure>
 
-  Visual
-  72 / 100
+        <figure>
+          <img>
+          <figcaption>Visual</figcaption>
+          <p class="summary-score"><span>72</span> / 100</p>
+        </figure>
 
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      </section>
+
+      <button>Continue</button>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
 </body>
 </html>
