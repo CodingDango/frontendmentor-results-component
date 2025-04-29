@@ -41,7 +41,7 @@ Results component classes
 ===============================
 */
 
-.results-summary {
+.results-component {
   background: #fff;
   width: min(700px, 100%);
   height: 500px;
@@ -51,19 +51,42 @@ Results component classes
   border-radius: 30px;
 }
 
-.results-summary section {
-  padding: 20px 40px;
+.results-component section, 
+.results-component aside {
+  gap: 20px;
+  padding: 40px;
 }
 
-.results-summary h3 {
+.results-component h3 {
   font-size: 1.5rem;
 }
 
-.results-summary section:first-of-type {
+.results-component aside {
+  padding: 0 40px 40px 40px;
+}
+
+.results-component button {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 2px white solid;
+  background-color: var(--dark-greyish-blue);
+  color: var(--opposite-font-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/*
+###############################
+Results section (left side) 
+###############################
+*/
+
+.results-component section:first-of-type {
   grid-row-start: span 2;
   background: linear-gradient(180deg, #7158FF 0%, #2F00FF 75%);
   border-radius: 30px;
-  gap: 20px;
 }
 
 .results-score {
@@ -73,7 +96,6 @@ Results component classes
   border-radius: 50%;
   text-align: center;
   color: var(--font-light);
-  font-size: 1.25rem;
 }
 
 .results-score span {
@@ -82,5 +104,93 @@ Results component classes
   color: var(--opposite-font-color);
 }
 
+.results-comparison {
+  font-size: 1.75rem;
+  color: var(--opposite-font-color);
+  font-weight: 700;
+}
+
+.results-description {
+  text-align: center;
+  justify-self: flex-end;
+}
+
+
+/*
+###############################
+Summary section (right side) 
+###############################
+*/
+
+
+.results-component .skill-assessment {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.skill-assessment > span:first-child {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 15px
+}
+
+.skill-assessment img {
+  height: 30px;
+}
+
+.skill-assessment.red{
+  background-color: rgba(255, 80, 80, 0.10);
+} 
+
+.skill-assessment.red figcaption {
+  font-weight: 600;
+  color: rgb(212, 78, 78);
+} 
+
+
+.skill-assessment.yellow {
+  background-color: rgba(255, 229, 80, 0.1);  
+}
+
+.skill-assessment.yellow figcaption {
+  font-weight: 600;
+  color: rgb(255, 176, 6);
+} 
+
+
+.skill-assessment.green{
+  background-color: rgba(100, 255, 80, 0.1);
+}
+
+.skill-assessment.green figcaption {
+  font-weight: 600;
+  color: rgb(0, 199, 99);
+} 
+
+
+.skill-assessment.blue {
+  background-color: rgba(80, 98, 255, 0.1);
+}
+
+.skill-assessment.blue figcaption {
+  font-weight: 600;
+  color: blue;
+} 
+
+
+.skill-assessment-score {
+  color: var(--font-light);
+  font-weight: 600;
+}
+
+.skill-assessment-score span {
+  font-weight: 600;
+}
 
 
