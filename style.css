@@ -15,6 +15,7 @@ Setting up
   --light-purple: #7158FF;
   --blueish-purple: #2F00FF;
   --dark-greyish-blue: #23314D;
+  --light-greyish-blue: #334771;
 
   --bg-color: #DEE8FF;
 
@@ -225,38 +226,38 @@ Summary section (right side)
   height: 30px;
 }
 
-.skill-assessment.red{
+.skill-assessment.reaction {
   background-color: rgba(255, 80, 80, 0.10);
 } 
 
-.skill-assessment.red figcaption {
+.skill-assessment.reaction figcaption {
   font-weight: 600;
   color: rgb(212, 78, 78);
 } 
 
-.skill-assessment.yellow {
+.skill-assessment.memory {
   background-color: rgba(255, 229, 80, 0.1);  
 }
 
-.skill-assessment.yellow figcaption {
+.skill-assessment.memory figcaption {
   font-weight: 600;
   color: rgb(255, 176, 6);
 } 
 
-.skill-assessment.green{
+.skill-assessment.verbal {
   background-color: rgba(100, 255, 80, 0.1);
 }
 
-.skill-assessment.green figcaption {
+.skill-assessment.verbal figcaption {
   font-weight: 600;
   color: rgb(0, 199, 99);
 } 
 
-.skill-assessment.blue {
+.skill-assessment.visual {
   background-color: rgba(80, 98, 255, 0.1);
 }
 
-.skill-assessment.blue figcaption {
+.skill-assessment.visual figcaption {
   font-weight: 600;
   color: blue;
 } 
@@ -287,6 +288,11 @@ Summary section (right side)
   color: var(--opposite-font-color);
 
   cursor: pointer;
+  transition: 0.2s background-color;
+}
+
+.results-component button:hover {
+  background-color: var(--light-greyish-blue);
 }
 
 
