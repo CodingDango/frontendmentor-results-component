@@ -5,7 +5,7 @@ Heya, this is a challenge from frontendmentor
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./preview.png)
 
 
 ### Links
