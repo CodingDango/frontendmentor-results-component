@@ -28,11 +28,16 @@
 body {
   background-color: var(--bg-color);
   min-height: 100vh;
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 main {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
@@ -47,55 +52,50 @@ Results component classes
   height: 500px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 80% 20%;
+  grid-template-rows: 100%;
   border-radius: 30px;
 }
 
-.results-component section, 
-.results-component aside {
+.results-component .results-page,
+.results-component .summary-page {
   gap: 20px;
-  padding: 40px;
+  padding: 40px 20px;
 }
-
-.results-component h3 {
-  font-size: 1.5rem;
-}
-
-.results-component aside {
-  padding: 0 40px 40px 40px;
-}
-
-.results-component button {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  border: 2px white solid;
-  background-color: var(--dark-greyish-blue);
-  color: var(--opposite-font-color);
-  font-weight: 600;
-  cursor: pointer;
-}
-
 
 /*
 ###############################
-Results section (left side) 
+Results page (left page card)
 ###############################
 */
 
-.results-component section:first-of-type {
-  grid-row-start: span 2;
+.results-component .results-page {
   background: linear-gradient(180deg, #7158FF 0%, #2F00FF 75%);
   border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results-component .results-page h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--font-light);
 }
 
 .results-score {
-  background: linear-gradient(180deg, var(--dark-purple) 0%, rgba(0, 0, 0, 0) 100%);
   width: 200px;
   height: 200px;
-  border-radius: 50%;
   text-align: center;
   color: var(--font-light);
+
+  background: linear-gradient(180deg, var(--dark-purple) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .results-score span {
@@ -113,6 +113,7 @@ Results section (left side)
 .results-description {
   text-align: center;
   justify-self: flex-end;
+  color: var(--font-light);
 }
 
 
@@ -122,15 +123,32 @@ Summary section (right side)
 ###############################
 */
 
+.results-component .summary-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-component .summary-page h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.results-component .skill-assessments {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
 
 .results-component .skill-assessment {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 50px;
   padding: 10px 15px;
   border-radius: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .skill-assessment > span:first-child {
@@ -153,7 +171,6 @@ Summary section (right side)
   color: rgb(212, 78, 78);
 } 
 
-
 .skill-assessment.yellow {
   background-color: rgba(255, 229, 80, 0.1);  
 }
@@ -162,7 +179,6 @@ Summary section (right side)
   font-weight: 600;
   color: rgb(255, 176, 6);
 } 
-
 
 .skill-assessment.green{
   background-color: rgba(100, 255, 80, 0.1);
@@ -173,7 +189,6 @@ Summary section (right side)
   color: rgb(0, 199, 99);
 } 
 
-
 .skill-assessment.blue {
   background-color: rgba(80, 98, 255, 0.1);
 }
@@ -182,7 +197,6 @@ Summary section (right side)
   font-weight: 600;
   color: blue;
 } 
-
 
 .skill-assessment-score {
   color: var(--font-light);
@@ -193,4 +207,30 @@ Summary section (right side)
   font-weight: 600;
 }
 
+.results-component button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
 
+  width: 100%;
+  height: 100%;
+  
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: var(--dark-greyish-blue);
+  color: var(--opposite-font-color);
+}
+
+.results-component button div {
+  width: 100%;
+  height: 60px;
+
+  text-align: center;
+
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px white solid;
+  background-color: var(--dark-greyish-blue);
+  color: var(--opposite-font-color);
+}
