@@ -18,6 +18,7 @@ Setting up
   --light-greyish-blue: #334771;
 
   --bg-color: #DEE8FF;
+  --card-shadow: rgba(46, 43, 233, 0.2);
 
   --font-color: #111;
   --font-light: #b1b1b1;
@@ -115,6 +116,13 @@ Results component classes
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 100%;
   border-radius: 30px;
+
+  transition: 0.3s ease-out transform, 0.3s ease-out box-shadow;
+}
+
+.results-component:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 10px 20px var(--card-shadow);
 }
 
 .results-component .results-page,
@@ -213,6 +221,12 @@ Summary section (right side)
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  transition: 0.2s transform, opacity;
+}
+
+.results-component .skill-assessment:hover {
+  transform: translateY(-5px);
 }
 
 .skill-assessment > span:first-child {
@@ -236,7 +250,7 @@ Summary section (right side)
 } 
 
 .skill-assessment.memory {
-  background-color: rgba(255, 229, 80, 0.1);  
+  background-color: rgba(255, 229, 80, 0.10);  
 }
 
 .skill-assessment.memory figcaption {
@@ -245,7 +259,7 @@ Summary section (right side)
 } 
 
 .skill-assessment.verbal {
-  background-color: rgba(100, 255, 80, 0.1);
+  background-color: rgba(100, 255, 80, 0.10);
 }
 
 .skill-assessment.verbal figcaption {
@@ -254,7 +268,7 @@ Summary section (right side)
 } 
 
 .skill-assessment.visual {
-  background-color: rgba(80, 98, 255, 0.1);
+  background-color: rgba(80, 98, 255, 0.10);
 }
 
 .skill-assessment.visual figcaption {
