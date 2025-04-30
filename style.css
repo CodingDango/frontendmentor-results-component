@@ -1,3 +1,9 @@
+/*
+===============================
+Setting up
+===============================
+*/
+
 @font-face {
     font-family: "Hanken Grotesk";
     src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") 
@@ -16,6 +22,42 @@
   --font-light: #b1b1b1;
   --opposite-font-color: #fff;
 }
+
+
+/*
+===============================
+Frontendmentor attribution
+===============================
+*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*
+===============================
+Semantic utility classes
+===============================
+*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; /* Avoids potential scrollbars */
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* Optional, prevents line breaks */
+  border: 0;
+}
+
+
+/*
+===============================
+Unique selectors
+===============================
+*/
 
 * {
     margin: 0;
@@ -38,7 +80,24 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 40px;
 }
+
+
+/*
+###############################
+Unique selectors media queries
+###############################
+*/
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {
+  main {
+    padding: 20px;
+  }
+}
+
 
 /*
 ===============================
@@ -49,7 +108,8 @@ Results component classes
 .results-component {
   background: #fff;
   width: min(700px, 100%);
-  height: 500px;
+  height: auto;
+
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 100%;
@@ -58,7 +118,7 @@ Results component classes
 
 .results-component .results-page,
 .results-component .summary-page {
-  gap: 20px;
+  gap: 25px;
   padding: 40px 20px;
 }
 
@@ -211,7 +271,6 @@ Summary section (right side)
 }
 
 .results-component .continue-btn {
-  flex-grow: 1;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -228,4 +287,29 @@ Summary section (right side)
   color: var(--opposite-font-color);
 
   cursor: pointer;
+}
+
+
+/*
+###############################
+Results component media queries 
+###############################
+*/
+
+@media (max-width: 768px) {
+  .results-component {
+    width: 400px;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 50%);
+  }
+}
+
+@media (max-width: 500px) {
+  .results-component {
+    width: min(350px, 100%);
+  }
+
+  main {
+    padding: 20px;
+  }
 }
