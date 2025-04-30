@@ -15,12 +15,7 @@ Heya, this is a challenge from frontendmentor
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML, CSS, Javascript. Just the basics.
 
 ### What I learned
 
