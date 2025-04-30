@@ -131,7 +131,7 @@ Results page (left page card)
 */
 
 .results-component .results-page {
-  background: linear-gradient(180deg, #7158FF 0%, #2F00FF 75%);
+  background: linear-gradient(180deg, var(--light-purple) 0%, var(--blueish-purple) 75%);
   border-radius: 30px;
 
   display: flex;
@@ -276,6 +276,8 @@ Summary section (right side)
   justify-content: end;
   align-items: center;
   flex-direction: column;
+  border-radius: 30px;
+  background: linear-gradient(180deg, var(--light-purple) 0%, var(--blueish-purple) 75%); /* Use variables in the background */
 }
 
 .results-component button {
@@ -283,7 +285,7 @@ Summary section (right side)
   height: 60px;
   font-weight: 600;
   border-radius: 30px;
-  border: 2px white solid;
+  border: none;
   background-color: var(--dark-greyish-blue);
   color: var(--opposite-font-color);
 
@@ -292,7 +294,7 @@ Summary section (right side)
 }
 
 .results-component button:hover {
-  background-color: var(--light-greyish-blue);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 
