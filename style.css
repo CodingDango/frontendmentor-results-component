@@ -21,7 +21,7 @@ Setting up
   --card-shadow: rgba(46, 43, 233, 0.2);
 
   --font-color: #111;
-  --font-light: #b1b1b1;
+  --font-light: #c5c5c5;
   --opposite-font-color: #fff;
 }
 
@@ -127,8 +127,8 @@ Results component classes
 
 .results-component .results-page,
 .results-component .summary-page {
-  gap: 25px;
-  padding: 40px 20px;
+  gap: 30px;
+  padding: 40px;
 }
 
 
