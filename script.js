@@ -27,21 +27,19 @@ function loadSkillAssessments()
     skills_promise = fetchJson("./data/skills.json");
     
     skills_promise.then(data => {
-        for (let i = 0; i < data.length; i++) 
-            {
-                const skill = data[i];
-                const assessment_markup = 
-                    `<figure class="skill-assessment ${skill.category.toLowerCase()}">
-                        <span>
-                            <img src=${skill.icon} alt="${skill.category} icon">
-                            <figcaption>${skill.category}</figcaption>
-                        </span>
-                    <p class="skill-assessment-score"><span>${skill.score}</span> / 100</p>
-                    </figure>
-                    `;    
-        
-                skill_assessments.insertAdjacentHTML("beforeend", assessment_markup);
-            }
+        data.forEach(skill => {
+            const assessment_markup = 
+                `<figure class="skill-assessment ${skill.category.toLowerCase()}">
+                    <span>
+                        <img src=${skill.icon} alt="${skill.category} icon">
+                        <figcaption>${skill.category}</figcaption>
+                    </span>
+                <p class="skill-assessment-score"><span>${skill.score}</span> / 100</p>
+                </figure>
+                `;    
+    
+            skill_assessments.insertAdjacentHTML("beforeend", assessment_markup);
+        });
     });
 }
 
